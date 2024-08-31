@@ -73,15 +73,18 @@
                 </div>
               </div>
 			  <!-- HEADER HEADLINE -->
-              <div class="row">
-                <div class="col-md-8 col-md-offset-1 inner">
-                  <h1 class="animated fadeInDown">
-                    CL<span style="color:#8f7a07;">AA</span>TY<br/>
-                    <span>FRA<span style="color:#7c7207">N</span>KLIN</span>
-                  </h1><!-- Title -->
-                  <h3 class="animated fadeInUp delay-05s"><span class="rotate">Tattoo Artist,Body piercer </span></h3><!-- Text Rotator -->
-                </div>
-              </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-1 inner">
+             <h1 class="animated fadeInDown">
+                  CL<span style="color:#8f7a07;">AA</span>TY<br/>
+                  <span>FRA<span style="color:#7c7207">N</span>KLIN</span>
+              </h1><!-- Title -->
+              <h3 class="animated fadeInUp delay-05s">
+                  <span class="rotate">Tattoo Artist,Body piercer,Tattoo Tutor</span>
+              </h3><!-- Text Rotator -->
+          </div>
+      </div>
+      
 			  <!-- Learn More Button -->
               <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
@@ -603,7 +606,41 @@
 		
 		
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+The HTML structure you provided is well-formed, and if you want to rotate the text "Tattoo Artist" and "Body piercer" using the jquery.simple-text-rotator.js plugin, you would need to include the necessary JavaScript. Here's how to do it:
+
+HTML with Text Rotator:
+html
+Copy code
+<div class="row">
+    <div class="col-md-8 col-md-offset-1 inner">
+        <h1 class="animated fadeInDown">
+            CL<span style="color:#8f7a07;">AA</span>TY<br/>
+            <span>FRA<span style="color:#7c7207">N</span>KLIN</span>
+        </h1><!-- Title -->
+        <h3 class="animated fadeInUp delay-05s">
+            <span class="rotate">Tattoo Artist,Body piercer</span>
+        </h3><!-- Text Rotator -->
+    </div>
+</div>
+JavaScript to Initialize the Text Rotator:
+javascript
+Copy code
+$(document).ready(function(){
+    $(".rotate").textrotator({
+        animation: "fade", // Choose the animation: fade, dissolve, flip, etc.
+        separator: ",",    // Separator for the words
+        speed: 2000        // Time between rotations in milliseconds
+    });
+});
+Including Necessary Scripts:
+Ensure that you include both jQuery and the jquery.simple-text-rotator.js plugin in your HTML:
+
+html
+Copy code
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- SmoothScroll -->           
     <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
     <!-- Bootstrap -->
@@ -621,7 +658,7 @@
 	<!-- Modernizr -->
     <script src="js/modernizr.js"></script>
 	<!-- Text Rotator -->
-	<script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
+	<script src="assets/TEXTROTATE/jquery.simple-text-rotator.js"></script>
 	<!-- Lightbox.js -->
     <script src="assets/lightbox/js/lightbox.min.js"></script>
     <!-- Google Maps --> 
@@ -667,7 +704,7 @@
     $(".rotate").textrotator({
       animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
       separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-      speed: 2000 // How many milliseconds until the next word show.
+      speed: 3000 // How many milliseconds until the next word show.
     });
     </script>
 	
