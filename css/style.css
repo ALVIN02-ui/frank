@@ -16,6 +16,48 @@
     overflow:visible;
     background: #fff url('../img/preloader.gif') no-repeat center center;
 }
+/* Preloader Styling */
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000; /* Background color of the preloader */
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  /* Flicker Effect */
+  .flicker {
+	font-size: 24px;
+	color: #ffffff;
+	text-align: center;
+	animation: flickerAnimation 1.5s infinite alternate;
+  }
+  
+  /* Keyframes for Flicker Animation */
+  @keyframes flickerAnimation {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+	  opacity: 1;
+	  text-shadow: 
+		-0.2px -0.2px 1px #fff, 
+		0.2px 0.2px 1px #fff, 
+		0 0 5px #ff9800, 
+		0 0 10px #ff9800, 
+		0 0 15px #ff9800, 
+		0 0 20px #ff9800, 
+		0 0 25px #ff9800, 
+		0 0 30px #ff9800;
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+	  opacity: 0.3;
+	  text-shadow: none;
+	}
+  }
+  
 
 
 
